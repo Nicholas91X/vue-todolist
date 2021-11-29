@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div id="root">
+        <!-- header -->
+        <header>
+            <div class="container">
+                <img src="https://www.boolean.careers/images/misc/logo.png" alt="Boolean Logo">
+                <h2>ToDo List</h2>
+            </div>
+        </header>
+        <!-- /header -->
+        <!-- main -->
+        <main>
+            <div class="container">
+                <div class="add-to-do">
+                    <input type="text" placeholder="Inserisci attività" v-model="inputValue" @keyup.enter="addToDo()">
+                    <button @click="addToDo()">Aggiungi</button>
+                </div>
+                <div class="to-do">
+                    <ul v-if="content.length > 0">
+                        <li v-for="(content, index) in content" :key="content.testo">
+                            <span>{{content.testo}}</span>
+                            <i class="fas fa-times" @click="removeToDo(index)"></i>
+                        </li>
+                    </ul>
+                    <h2 v-else>Non ci sono attività</h2>
+                </div>
+            </div>
+        </main>
+        <!-- /main -->
+        <!-- footer -->
+        <footer></footer>
+        <!-- /footer -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

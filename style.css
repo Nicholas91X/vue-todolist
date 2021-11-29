@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 70%;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container img {
+    width: 30%;
+    padding: 10px;
+}
+
+.container h2 {
+    margin: 20px;
+}
+
+.to-do {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.to-do ul {
+    list-style: none;
+}
+
+.to-do li {
+    padding: 5px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.to-do li:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.to-do li i {
+    cursor: pointer;
+}
