@@ -45,3 +45,22 @@
 .to-do li i {
     cursor: pointer;
 }
+
+.linethrough {
+    text-decoration: line-through;
+}
+
+.add-to-do input,
+.add-to-do button {
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.add-to-do button {
+    background-color: green;
+    text-transform: uppercase;
+    color: white;
+}

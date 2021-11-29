@@ -29,6 +29,13 @@ const app = new Vue({
         },
         removeToDo: function(index) {
             this.content.splice(index, 1);
+        },
+        lineThrough: function(content) {
+            if(content.done == false) {
+                content.done = true;
+            } else {
+                content.done = false;
+            }
         }
     }
 })

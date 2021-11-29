@@ -29,8 +29,8 @@
                 </div>
                 <div class="to-do">
                     <ul v-if="content.length > 0">
-                        <li v-for="(content, index) in content" :key="content.testo">
-                            <span>{{content.testo}}</span>
+                        <li v-for="(content, index) in content" :key="content.testo" @click="lineThrough(content)">
+                            <span :class="{ linethrough : content.done}">{{content.testo}}</span>
                             <i class="fas fa-times" @click="removeToDo(index)"></i>
                         </li>
                     </ul>
