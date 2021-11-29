@@ -16,21 +16,22 @@
         <header>
             <div class="container">
                 <img src="https://www.boolean.careers/images/misc/logo.png" alt="Boolean Logo">
-                <h2>ToDo List</h2>
             </div>
         </header>
         <!-- /header -->
         <!-- main -->
         <main>
             <div class="container">
+                <h2>ToDo List</h2>
                 <div class="add-to-do">
                     <input type="text" placeholder="Inserisci attività" v-model="inputValue" @keyup.enter="addToDo()">
                     <button @click="addToDo()">Aggiungi</button>
                 </div>
                 <div class="to-do">
                     <ul v-if="content.length > 0">
-                        <li v-for="(content, index) in content" :key="content.testo" @click="lineThrough(content)">
+                        <li v-for="(content, index) in content" :key="content.testo">
                             <span :class="{ linethrough : content.done}">{{content.testo}}</span>
+                            <input type="checkbox" name="check" id="check" @click="lineThrough(content)">
                             <i class="fas fa-times" @click="removeToDo(index)"></i>
                         </li>
                     </ul>

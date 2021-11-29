@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+header {
+    background-color: #bbb;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container>h2 {
+    font-size: 45px;
+}
+
 .container {
     width: 70%;
     max-width: 1080px;
@@ -12,7 +22,7 @@
 }
 
 .container img {
-    width: 30%;
+    width: 50%;
     padding: 10px;
 }
 
@@ -36,6 +46,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .to-do li:not(:last-child) {
@@ -44,6 +55,11 @@
 
 .to-do li i {
     cursor: pointer;
+}
+
+.to-do li input {
+    position: absolute;
+    right: 50px;
 }
 
 .linethrough {
